@@ -19,25 +19,45 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RSg-UC-BQF">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RSg-UC-BQF">
+                    <rect key="frame" x="0.0" y="105" width="393" height="713"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRW-pa-4mw" userLabel="Logout">
+                    <rect key="frame" x="283" y="69" width="100" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Pk9-qk-LJQ"/>
+                        <constraint firstAttribute="height" constant="20" id="hVO-A4-QZw"/>
+                    </constraints>
+                    <buttonConfiguration key="configuration" style="gray" title=" Logout">
+                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleSubhead"/>
+                        <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="logOutButtonTapped:" destination="-1" eventType="touchUpInside" id="M7f-77-rsf"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="RSg-UC-BQF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4Zl-Zf-CbK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qRW-pa-4mw" secondAttribute="trailing" constant="10" id="2Vg-bz-jeR"/>
+                <constraint firstItem="RSg-UC-BQF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="4Zl-Zf-CbK"/>
+                <constraint firstItem="qRW-pa-4mw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="GZN-0c-1GT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RSg-UC-BQF" secondAttribute="trailing" id="cCq-CG-CvF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RSg-UC-BQF" secondAttribute="bottom" id="g0H-vT-VOZ"/>
                 <constraint firstItem="RSg-UC-BQF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="opf-QL-mA1"/>
             </constraints>
-            <point key="canvasLocation" x="138" y="20"/>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

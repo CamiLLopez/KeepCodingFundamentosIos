@@ -8,8 +8,17 @@ struct CustomItem {
 
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func logOutButtonTapped(_ sender: UIButton) {
+        UIApplication
+            .shared
+            .connectedScenes
+            .compactMap{($0 as? UIWindowScene)?.keyWindow}
+            .first?
+            .rootViewController = LoginViewController()
+    }
     var heroes: [Heroe] = []
     
     
@@ -19,13 +28,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         
-        //Titulo de todo
-        //title = "Heroes"
-        
         navigationItem.title = "Heroes"
-        
-        
-        
         //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell") // identifier is unique
         
         let xib = UINib(nibName: "TableCell", bundle: nil)

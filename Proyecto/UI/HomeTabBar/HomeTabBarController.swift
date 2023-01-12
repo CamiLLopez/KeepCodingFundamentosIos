@@ -22,6 +22,7 @@ class HomeTabBarController: UITabBarController {
         navigationController1.tabBarItem = UITabBarItem(title: "TableView", image: tabImage, tag: 0)
         
         let navigationController2 = UINavigationController(rootViewController: CollectionViewController())
+        
         let tabImg = UIImage(systemName: "square.grid.3x3.topleft.filled")!
         navigationController2.tabBarItem = UITabBarItem(title: "CollectionView", image: tabImg, tag: 1)
         

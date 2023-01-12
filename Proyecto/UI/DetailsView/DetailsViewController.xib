@@ -23,9 +23,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GYr-hV-7pV">
-                    <rect key="frame" x="0.0" y="59" width="391" height="160"/>
+                    <rect key="frame" x="0.0" y="59" width="391" height="200"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="160" id="eiE-6Y-9JP"/>
+                        <constraint firstAttribute="height" constant="200" id="eiE-6Y-9JP"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtV-8s-Ydo">

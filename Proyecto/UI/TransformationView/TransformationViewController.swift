@@ -39,7 +39,6 @@ class TransformationViewController: UIViewController, UITableViewDelegate, UITab
         cell.iconImageView.setImage(url: transformation.photo)
         cell.titleLabel.text = String(transformation.name.dropFirst(3))
         cell.descLabel.text = transformation.description
-        cell.accessoryType = .disclosureIndicator
         cell.selectionStyle = .none
         
         return cell

@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CollectionViewController" customModule="Proyecto" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="13Y-nf-0lD" id="w4i-Bh-aMc"/>
+                <outlet property="logOutButton" destination="pjL-tC-V0N" id="hDI-hb-Kjt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="13Y-nf-0lD">
-                    <rect key="frame" x="16" y="0.0" width="361" height="852"/>
+                    <rect key="frame" x="16" y="84" width="361" height="734"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="0.0" id="HQX-Wn-CJA">
                         <size key="itemSize" width="128" height="128"/>
@@ -29,14 +30,31 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjL-tC-V0N">
+                    <rect key="frame" x="283" y="62" width="100" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Ls5-4a-Ybr"/>
+                        <constraint firstAttribute="width" constant="100" id="PCM-Ag-zAO"/>
+                    </constraints>
+                    <buttonConfiguration key="configuration" style="gray" title=" Logout">
+                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleSubhead"/>
+                        <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="logOutButtonTapped:" destination="-1" eventType="touchUpInside" id="0SG-Uz-GvD"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="13Y-nf-0lD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5zd-Ar-Qjv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pjL-tC-V0N" secondAttribute="trailing" constant="10" id="4MW-Ep-ZEL"/>
+                <constraint firstItem="13Y-nf-0lD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="5zd-Ar-Qjv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="13Y-nf-0lD" secondAttribute="trailing" constant="16" id="ETg-3T-plf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="13Y-nf-0lD" secondAttribute="bottom" id="Mpg-Lg-ZDd"/>
                 <constraint firstItem="13Y-nf-0lD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="j7o-dC-jd4"/>
+                <constraint firstItem="pjL-tC-V0N" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="3" id="m1Q-0Z-cf3"/>
             </constraints>
             <point key="canvasLocation" x="138" y="20"/>
         </view>
@@ -44,6 +62,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

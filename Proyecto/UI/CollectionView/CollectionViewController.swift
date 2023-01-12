@@ -10,7 +10,16 @@ import UIKit
 class CollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var logOutButton: UIButton!
     
+    @IBAction func logOutButtonTapped(_ sender: UIButton) {
+        UIApplication
+            .shared
+            .connectedScenes
+            .compactMap{($0 as? UIWindowScene)?.keyWindow}
+            .first?
+            .rootViewController = LoginViewController()
+    }
     var heroes: [Heroe] = []
 
     
