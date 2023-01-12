@@ -37,7 +37,7 @@ class TransformationViewController: UIViewController, UITableViewDelegate, UITab
         let cell = tableView.dequeueReusableCell(withIdentifier: "customTableCell", for: indexPath) as! TableCell
         let transformation = transformation[indexPath.row]
         cell.iconImageView.setImage(url: transformation.photo)
-        cell.titleLabel.text = transformation.name
+        cell.titleLabel.text = String(transformation.name.dropFirst(3))
         cell.descLabel.text = transformation.description
         cell.accessoryType = .disclosureIndicator
         cell.selectionStyle = .none
